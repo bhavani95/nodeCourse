@@ -13,9 +13,10 @@ const forecast = (latitude, longitude,callback) => {
 
        }
        else{
-        const {temperature, precipProbability} = Response.body.currently;
+        const {temperature, precipProbability,humidity} = Response.body.currently;
+        console.log(Response.body.currently);
       
-        callback(undefined, "Current temperature is: "+temperature+" and probability of rain is: "+precipProbability);
+        callback(undefined, "Current temperature is: "+temperature+" ,Probability of rain is: "+precipProbability+" and humidity is: "+humidity);
        }
 
     })
